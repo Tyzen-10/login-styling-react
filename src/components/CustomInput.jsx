@@ -18,12 +18,12 @@ border: 1px solid ${({$invalid})=>$invalid?'#f73f3f':'transparent'};
 border-radius: 0.25rem;
 box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 `
-export default function CustomInputs({invalid,label,...props}){
+export default function CustomInput({$invalid,label,...props}){
     return(
         <p>
-        <Label $invalid={invalid}>{label}</Label>
+        <Label $invalid={$invalid}>{label}</Label>
           <Input
-            $invalid={invalid}
+            $invalid={$invalid}
             {...props}
           />
         </p>

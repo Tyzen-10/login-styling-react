@@ -10,7 +10,7 @@ const ControlsDiv = styled.div`
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 `;
-import CustomInputs from "./CustomInput";
+import CustomInput from "./CustomInput";
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
@@ -35,19 +35,17 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <TestDiv>
         <ControlsDiv>
-          <CustomInputs
+          <CustomInput
             label="Email"
             $invalid={emailNotValid}
             type="email"
-            //className={emailNotValid ? 'invalid' : undefined}
             onChange={(event) => handleInputChange("email", event.target.value)}
           />
 
-          <CustomInputs
+          <CustomInput
             label="Password"
             $invalid={passwordNotValid}
             type="password"
-            //className={passwordNotValid ? 'invalid' : undefined}
             onChange={(event) =>
               handleInputChange("password", event.target.value)
             }
